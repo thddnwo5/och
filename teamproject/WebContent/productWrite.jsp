@@ -9,17 +9,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-     <%!private PrintWriter pw;%>
-     <% String storeImg     = request.getParameter("storeImg"); %>
+      <%!private PrintWriter pw;%>
+     <% String storeImg     = request.getParameter("storeImg"); %> 
 <body>    
-    <%
+     <%
       String fileName = "C:/storeImg/"+storeImg;         
 	  try{    
 	  pw = new PrintWriter (new FileWriter(fileName,true));
 	     }catch(IOException e){
 	    	 e.printStackTrace();
 	     }  
-    %>
+    %> 
     <jsp:forward page="storeWriteAction.jsp"/>
 </body>
 </html>

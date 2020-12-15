@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class boardDAO {
     private Connection conn;
@@ -66,5 +67,44 @@ public class boardDAO {
 		}
 		
 		return -1;
+	}
+	
+	public ArrayList<board> getStorelist () throws SQLException{
+		String SQL ="SELECT * FROM STOREBBS";
+		ArrayList<board> storelist = new ArrayList<board>();
+		PreparedStatement pstmt = null;
+		
+		try {
+			
+			pstmt = conn.prepareStatement(SQL);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				do {
+					board board = new board();
+					
+					board.setStoreNum(rs.getInt(1));
+					board.setStoreProduct(rs.getString(2));
+					board.setProductInfo(rs.getString(3));
+					board.setProductPrice(rs.getInt(4));
+					board.setStoreKgori(rs.getString(5));
+					board.setStCommtCont(rs.getInt(6));
+					board.setStRecomCont(rs.getInt(7));
+					board.setStoreDate(rs.getString(8));
+					board.setStoreImg(rs.getString(9));
+					
+					storelist.add(board);
+					
+				}while(rs.next());
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(pstmt != null) pstmt.close();
+			if(rs    != null) rs.close();
+		}
+		
+		
+		return storelist;
 	}
 }

@@ -30,8 +30,16 @@
     
     	  
 </script>
+
 </head>
 <body>
+
+      <input type="image" value="/iconImg/pet-house.png">
+      <div class="main">
+          <div class="main_logo" align="center"></div>
+      </div>
+
+    <div>
       <form action="productWrite.jsp" name="frm" method="post" 
        onsubmit="return chk()" autocomplete="off">
       <table border="1">
@@ -59,5 +67,8 @@
       </table>
          <input type="submit" value="확인">
       </form>
+      <p>
+      실제 경로 보기<%=request.getRealPath("/") %>
+      </div>
 </body>
 </html>
