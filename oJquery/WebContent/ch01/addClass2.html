@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+        .highlight_0 { background-color: violet;}
+        .highlight_1 { background-color: red;}
+        .highlight_2 { background-color: orange;}
+        .highlight_3 { background-color: yellow;}
+        .highlight_4 { background-color: green;}
+        .highlight_5 { background-color: blue;}
+        .highlight_6 { background-color: navy;}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+        $(function() {
+			  $('h1').each(function(index,item) {
+				    //alert('index->'+index);
+				    $(this).addClass('highlight_'+index);
+			});
+		});
+</script>
+</head>
+<body>
+        <h1>1</h1>
+        <h1>2</h1>
+        <h1>3</h1>
+        <h1>4</h1>
+        <h1>5</h1>
+        <h1>6</h1>
+        <h1>7</h1>
+        <h1>8</h1>
+        <h1>9</h1>
+        <h1>10</h1>
+        <h1>11</h1>
+        <h1>12</h1>
+        <h1>13</h1>
+</body>
+</html>
