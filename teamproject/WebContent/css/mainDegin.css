@@ -1,0 +1,89 @@
+@charset "UTF-8";
+    /* 마이페이지위치 */
+  span#myPage-css{
+       
+       position: relative;
+       bottom: 30px;
+       left:50px;
+  
+  }
+  
+     /* 메인 로고 */
+  span#main-logo-css{
+  
+       position: relative;
+       left: 500px;
+  }
+   /* 상단 오른쪽 (login이랑 회원가입잇는공간) */ 
+  span#top-right-css{
+       position: relative;
+       bottom: 30px;
+       left: 900px;
+  }
+   /* nav공간에 있는 큰틀 */
+  div#nav-logo-css{
+      position: relative;
+      left: 230px;
+  }
+    /* nav공간안에 있는 반려동물자랑 이미지 */
+  span#pet-boast-css{
+       position: absolute;
+       left: 100px;
+       width: 250px;
+       bottom: 50px;       
+  }
+   /* nav에 있는 tip버튼 css */ 
+  span#tip-css{
+      position: absolute;
+      left: 320px;
+      width: 250px;
+      bottom: 53px;
+  }
+   /* nav에 있는 store 버튼 css */
+  span#store-css{
+      position: absolute;
+      left: 535px;
+      width: 250px;
+      bottom: 58px;
+  }
+   /* 검색창 로고 css */
+  div#search-icon-css{
+       position: relative;
+       margin-top: 10px;
+       left: 340px;
+       width: 500px;
+       height: 50px;
+  }
+  
+  input.search-bar-css{
+        background:url(../iconImg/search_bar-icon.png);
+        background-repeat:no-repeat;
+        width: 550px;
+        height: 70px;
+        border: none;
+        padding:5px 30px 5px 40px;
+        outline: none;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border-bottom: 0px;
+        font-size: 40px;
+        
+  }
+  input#seach{
+     
+     background: url(../iconImg/dotbogi-icon.png);
+     background-repeat:no-repeat;
+     width:80px;
+     height:80px;
+     border:0;
+  }
+  span#search-bar{
+    position: relative;
+    right: 30px;
+  }  
+  span#search-dotbogi{
+     position: relative;
+      left: 560px;
+      bottom:82px;
+  }

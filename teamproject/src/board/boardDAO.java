@@ -44,27 +44,27 @@ public class boardDAO {
 		
 		return "";
 	}
-	public int storeWrite(String storeKgori,String storeProduct,
-			              String storeImg,String productInfo,int productPrice) {
+	public int storeWrite(board board) {
 		String SQL = "INSERT INTO STOREBBS VALUES(STORENUM_SEQ.NEXTVAL,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt = null;
-		storeImg ="C:/storeImg/"+storeImg;
+		
 		try {
-			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1,storeProduct);
-			pstmt.setString(2,productInfo);
-			pstmt.setInt(3,productPrice);
-			pstmt.setString(4,storeKgori);
-			pstmt.setInt(5,0);
-			pstmt.setInt(6,0);
-			pstmt.setString(7,getDate());
-			pstmt.setString(8,storeImg);
-			
-			return pstmt.executeUpdate();
-			
+			 pstmt = conn.prepareStatement(SQL);
+			 pstmt.setString(1, board.getStoreProduct());
+			 pstmt.setString(2, board.getProductInfo());
+			 pstmt.setInt(3, board.getProductPrice());
+			 pstmt.setString(4, board.getStoreKgori());
+			 pstmt.setInt(5,0);
+			 pstmt.setInt(6,0);
+			 pstmt.setString(7,getDate());
+			 pstmt.setString(8,board.getStoreImg());
+			 
+			 return pstmt.executeUpdate();
+			 
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 		
 		return -1;
 	}
