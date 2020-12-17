@@ -4,7 +4,7 @@
        
        position: relative;
        bottom: 30px;
-       left:50px;
+       left:10%;
   
   }
   
@@ -12,13 +12,13 @@
   span#main-logo-css{
   
        position: relative;
-       left: 500px;
+       left: 60%;
   }
    /* 상단 오른쪽 (login이랑 회원가입잇는공간) */ 
   span#top-right-css{
        position: relative;
        bottom: 30px;
-       left: 900px;
+       left: 100%;
   }
    /* nav공간에 있는 큰틀 */
   div#nav-logo-css{

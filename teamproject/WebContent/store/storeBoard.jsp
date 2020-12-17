@@ -51,7 +51,7 @@
             </span>
       </div>
         <!-- 희미한선 구역나누기용 -->
-     <div style=" width: 800px;">
+     <div>
       <img src="../iconImg/backgroundline.png" width="1250px" height="10px"></div>
       
       <!-- 검색기능div -->
